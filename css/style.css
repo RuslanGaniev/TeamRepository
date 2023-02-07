@@ -58,10 +58,10 @@ body {
 
 /* ---------------------------------------------------------------------------- */
 .wrapper {
-	min-height: 100%;
-	overflow: hidden;
 	display: flex;
 	flex-direction: column;
+	min-height: 100%;
+	overflow: hidden;
 }
 main{
 	flex: 1 1 auto;
@@ -69,22 +69,18 @@ main{
 /* ---------------------------------------------------------------------------- */
 ._container {
 	max-width: 1130px;
-	padding: 0px 20px;
-	margin: 0px auto;
+	padding: 0 20px;
+	margin: 0 auto;
 	box-sizing: content-box;
 }
-._ibg {
-	position: relative;
-}
 ._ibg img {
-	position: absolute;
 	width: 100%;
 	height: 100%;
 	top: 0;
 	left: 0;
 	object-fit: cover;
 }
-.header {
+.header-block__wrapper{
 	position: absolute;
 	width: 100%;
 	left: 0;
@@ -96,27 +92,17 @@ main{
 	align-items: center;
 	justify-content: space-between;
 	min-height: 104px;
-
 }
 .header__logo {
 	font-size: 24px;
 	font-weight: 700;
 	color: #62D0DF;
 }
-.header__hamburger-menu{
-	display: none;
-	margin-left: auto;
-	border-radius: 2px;
-	width: 35px;
-	height: 35px;
-	color:#ADB4D2;
-	border: 1px solid #D1D1E4;
-	box-sizing: border-box;
-}
 .menu__btn{
   display: flex;
   align-items: center;
   position: absolute;
+	visibility: hidden;
   top: 38px;
   right:24px;
   width: 26px;
@@ -145,9 +131,6 @@ main{
 #menu__toggle {
   opacity: 0;
 }
-.header__menu {
-	margin: 0px 0px 0px 0px;
-}
 .menu {
 	display: flex;
 	align-items: center;
@@ -158,10 +141,8 @@ main{
 	display: flex;
 	flex-basis: 80%;
 }
-.menu__item {
-}
 .menu__item:not(:last-child) {
-	margin: 0px 26px 0px 0px;
+	margin: 0 26px 0 0;
 }
 .menu__link {
 	color: #22356F;
@@ -174,45 +155,51 @@ main{
 	padding-bottom: 8px;
 }
 .header_contact{
-	display: flex;
-	align-items: center;
-	justify-content: center;
 	text-align: center;
-	font-size: 14px;
-	color: #ffffff;
-	border-radius: 50px;
-	padding: 16px 33px;
-	font-weight: 700;
 	white-space: nowrap;
-	background-color:#62D0DF;;
 	box-sizing: border-box;
+	padding: 16px 33px;
+	font-size: 14px;
+	border-radius: 50px;
+	color: #ffffff;
+	font-weight: 700;
+	background-color:#62D0DF;;
 }
 @media(max-width:979px){
 .header__menu{
-	display: none;
-	position: absolute;
-	top: 70%;
-	width: 100%;
-	height: 100%;
-	z-index: 10;
-	left: 0;
-	right: 0;
-	margin-left: 0;
-	padding: 20px;
-	background-color: white;
-	filter: alpha(opacity=20);
-	box-shadow: 1px 0px 6px rgb(0 0 0 / 20%);
-	}
-.header__hamburger-menu{
 	display: block;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 80px 0;
+	z-index: 10;
+  list-style: none;
+  text-align: center;
+  background-color: #ECEFF1;
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
 	}
 .menu__list{
+	flex-direction: column;
 	justify-content: center;
+	margin-bottom: 35px;
 	}
-#menu__toggle:checked ~ .menu__btn > span {
+	.menu__item{
+		font-size: 24px;
+	}
+	.menu__item:not(:last-child) {
+		margin: 0 0 0 0;
+	}
+	.menu__btn{
+		visibility: visible;
+	}
+	#menu__toggle:checked ~ .menu__btn > span {
 	transform: rotate(45deg);
 	}
-#menu__toggle:checked ~ .menu__btn > span::before {
+	#menu__toggle:checked ~ .menu__btn > span::before {
 	top: 0;
 	transform: rotate(0);
 	}
@@ -221,8 +208,8 @@ main{
 	transform: rotate(90deg);
 	}
 	.header__hamburger-menu:has(#menu__toggle:checked) ~ .header__menu{
-		display: block;
-		
+		visibility: visible;
+		left: 0;
 	}
 }
 .header-block {
@@ -231,10 +218,10 @@ main{
 .header-block__container {
 }
 .header-block__body {
-	padding: 184px 0px 191px 0px;
 	position: relative;
-	z-index: 2;
 	max-width: 400px;
+	padding: 184px 0px 191px 0px;
+	z-index: 2;
 }
 @media (max-width: 992px) {
 	.header-block__body {
@@ -255,12 +242,12 @@ main{
 	color: #62D0DF;
 }
 .header-block-sub__title {
+	margin: 0 0 82px 0;
 	font-size: 48px;
 	line-height: 110%;
 	letter-spacing: 0.2px;
 	font-weight: 800;
 	color: #22356F;
-	margin: 0 0 82px 0;
 }
 @media (max-width: 479px) {
 	.header-block__title {
@@ -283,18 +270,17 @@ main{
 	margin: -10px 0;
 }
 .header-block__button {
-	border-radius: 37px;
 	display: flex;
-	min-height: 48px;
 	justify-content: center;
 	align-items: center;
-	letter-spacing: 0.2px;
-	
-	font-weight: 700;
 	text-align: center;
-	line-height: 150%;
-	padding: 5px 36px;
+	min-height: 48px;
 	margin: 10px 0;
+	padding: 5px 36px;
+	border-radius: 37px;
+	letter-spacing: 0.2px;
+	font-weight: 700;
+	line-height: 150%;
 	transition: all 0.3s ease 0s;
 }
 
