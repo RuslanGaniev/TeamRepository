@@ -343,3 +343,33 @@ main{
 		opacity: 0.5;
 	}
 }
+/* ---------------------------------------------------------------------------- */
+.main-block__whythrive{
+	display: flex;
+	background-color: var(--color-green-200);
+}
+.whythrive__container {
+	display: flex;
+}
+.whythrive__body {
+	padding-top: 155px;
+	margin: 0 107px;
+}
+.whythrive__title {
+	margin-bottom: 75px;
+	font-size: 36px;
+	font-weight: 700;
+	color: var(--color-white-100);
+}
+.whythrive__text-bold{
+	font-size: 18px;
+	font-weight: 700;
+	color: var(--color-white-100);
+	line-height: 2;
+}
+.whytrive__text {
+	font-size: 16px;
+	color: var(--color-white-100);
+	line-height: 2;
+}
+/* ---------------------------------------------------------------------------- */
