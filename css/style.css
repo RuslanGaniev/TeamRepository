@@ -372,6 +372,34 @@ main{
 	color: var(--color-white-100);
 	line-height: 2;
 }
+@media (max-width: 1085px){
+	.main-block__whythrive{
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+	.whythrive__body{
+		padding: 100px 0;
+	}
+}
+@media (max-width: 768px){
+	.whythrive__body{
+		width: 69%;
+    margin: 0 auto;
+}
+.whythrive__photo-img{
+	width: 500px;
+	height: 500px;
+}
+}
+@media (max-width: 480px){
+	.whythrive__body {
+    padding: 50px 0;
+	}
+	.whythrive__photo-img{
+		width: 300px;
+		height: 300px;
+	}
+}
 .main-block__inform {
 	padding: 120px 0;
 }
