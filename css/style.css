@@ -80,6 +80,24 @@ main{
 	left: 0;
 	object-fit: cover;
 }
+/* ---------------------------------------------------------------------------- */
+:root{
+	--color-white-100: #ffffff;
+
+	--color-green-100: #C4E769; 
+	--color-green-200: #62D0DF; 
+
+	--color-blue-100: #0052C1; 
+	--color-blue-200: #22356F;
+
+	--color-purple-100: #DEE1FF;
+	--color-purple-200: #8F00FF;
+
+	--color-pink-100: #FFE2DE;
+	
+	--color-orange-100: #FAB63E;
+}
+/* ---------------------------------------------------------------------------- */
 .header-block__wrapper{
 	position: absolute;
 	width: 100%;
@@ -96,7 +114,7 @@ main{
 .header__logo {
 	font-size: 24px;
 	font-weight: 700;
-	color: #62D0DF;
+	color:var(--color-green-200);
 }
 .menu__btn{
   display: flex;
