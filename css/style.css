@@ -857,4 +857,76 @@ main{
 		margin-right: 15px;
 	}
 }
+.main-block__thrivetalk{
+	display: flex;
+}
+.thrivetalk__photo-aside{
+	margin-right: 7%;
+}
+.main-block__statistic-container {
+	margin-top: 17%;
+}
+.main-block__statistic-title {
+	margin-bottom: 34%;
+	font-size: 16px;
+	color: var(--color-blue-200);
+}
+.main-block__statistic-text {
+	margin-bottom: 35%;
+	font-size: 36px;
+	color: var(--color-blue-200);
+}
+.main-block__statistic-textsky {
+	color: var(--color-green-200);
+}
+.main-block__statistic-downtext {
+	font-size: 16px;
+	color: var(--color-orange-100);
+}
+	@media (max-width: 992px){
+		.thrivetalk__photo-img{
+			height: 600px;
+		}
+		.main-block__statistic-text{
+			font-size: 24px;
+		}
+		.main-block__statistic-title{
+			margin-bottom: 24%;
+		}
+	}
+	@media (max-width: 767px){
+		.thrivetalk__photo-img{
+			height: 600px;
+			width: 360px;
+		}
+	}
+	@media (max-width: 650px){
+		.thrivetalk__photo-img{
+			height: 400px;
+			width: 240px;
+		}
+		.main-block__statistic-text{
+			font-size: 18px;
+		}
+		.main-block__statistic-title{
+			margin-bottom: 24%;
+		}
+	}
+	@media (max-width: 480px){
+		.thrivetalk__photo-img{
+			height: 300px;
+			width: 180px;
+		}
+		.main-block__statistic-text{
+			margin-bottom: 15%;
+			font-size: 14px;
+		}
+		.main-block__statistic-title{
+			margin-bottom: 18%;
+			font-size: 8px;
+		}
+		.main-block__statistic-downtext {
+			font-size: 8px;
+		}
+	}
 /* ---------------------------------------------------------------------------- */
