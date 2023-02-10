@@ -677,4 +677,88 @@ main{
 		padding-left: 20px;
 }
 }
+.main-block__sports{
+	display: flex;
+}
+.main-block__sports2{
+	display: flex;
+}
+.main-block__item-sport{
+	flex-basis: 34%;
+	position: relative;
+	padding: 100px 0 200px 0;
+	text-align: center;
+	font-size: 32px;
+	font-weight: 700;
+	color: var(--color-white-100);
+}
+.main-block__item-sport::before{
+	content: "";
+	position: absolute;
+	width: 8px;
+	height: 8px;
+	left: 18%;
+	top: 32%;
+	margin-left: 12px;
+	border-radius: 100%;
+	background-color: var(--color-orange-100);
+	cursor: pointer;
+}
+.main-block__item-sport::after{
+	content: "";
+	position: absolute;
+	width: 255px;
+	left: 20%;
+	top: 18%;
+	border-top: 1px solid var(--color-white-100);
+}
+.main-block__item-spor-darkblue{
+	background-color: var(--color-blue-200);
+}
+.main-block__item-sport-blue{
+	background-color: var(--color-blue-100);
+}
+.main-block__item-sport-photo{
+	background: url(../img/joanna-kosinska-340748.svg) ;
+}
+.main-block__item-sport-green{
+	background-color: var(--color-green-200);
+}
+.main-block__item-sport-pink{
+	background-color: var(--color-purple-100);
+}
+.main-block__item-sport-purple{
+	background-color: var(--color-purple-200);
+}
+@media (max-width: 1150px){
+	.main-block__item-sport::after{
+		width: 200px;
+	}
+	.main-block__item-sport::before{
+		width: 0px;
+		height: 0px;
+	}
+}
+@media (max-width: 992px){
+	.main-block__item-sport{
+		padding: 80px 0 140px 0;
+	}
+	.main-block__item-sport::after{
+		width: 160px;
+	}
+}
+@media (max-width: 767px){
+	.main-block__item-sport{
+		font-size: 24px;
+	}
+	.main-block__item-sport::after{
+		width: 0px;
+	}
+}
+@media (max-width: 480px){
+	.main-block__item-sport{
+		padding: 80px 0 100px 0;
+		font-size: 14px;
+	}
+}
 /* ---------------------------------------------------------------------------- */
